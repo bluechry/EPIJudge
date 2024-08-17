@@ -1,6 +1,7 @@
 from test_framework import generic_test
 
 
+# Solution 1: Shift and Mask
 def count_bits_1(x: int) -> int:
     count = 0
     while x:
@@ -9,6 +10,7 @@ def count_bits_1(x: int) -> int:
     return count
 
 
+# Solution 2: Remove the Right-most Set Bit
 def count_bits_2(x: int) -> int:
     count = 0
     while x:
@@ -17,6 +19,7 @@ def count_bits_2(x: int) -> int:
     return count
 
 
+# Solution 3: Pythonic Way
 def count_bits_3(x: int) -> int:
     return bin(x).count('1')
 
