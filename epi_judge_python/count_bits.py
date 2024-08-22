@@ -3,25 +3,17 @@ from test_framework import generic_test
 
 # Solution 1: Shift and Mask
 def count_bits_1(x: int) -> int:
-    count = 0
-    while x:
-        count += x & 1
-        x >>= 1
-    return count
+    return 0
 
 
-# Solution 2: Remove the Right-most Set Bit
+# Solution 2: Remove the Right-most Set Bit Repeatedly
 def count_bits_2(x: int) -> int:
-    count = 0
-    while x:
-        count += 1
-        x &= x - 1
-    return count
+    return 0
 
 
 # Solution 3: Pythonic Way
 def count_bits_3(x: int) -> int:
-    return bin(x).count('1')
+    return 0
 
 
 if __name__ == '__main__':
