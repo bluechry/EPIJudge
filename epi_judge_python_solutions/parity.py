@@ -10,7 +10,7 @@ def parity_1(x: int) -> int:
     return parity
 
 
-# Solution 2: Check Set Bits
+# Solution 2: Remove Right-most Bit Repeatedly 
 def parity_2(x: int) -> int:
     parity = 0
     while x:
