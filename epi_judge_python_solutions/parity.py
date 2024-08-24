@@ -10,7 +10,7 @@ def parity_1(x: int) -> int:
     return parity
 
 
-# Solution 2: Remove Right-most Bit Repeatedly 
+# Solution 2: Remove Right-most Bit Repeatedly
 def parity_2(x: int) -> int:
     parity = 0
     while x:
@@ -20,13 +20,14 @@ def parity_2(x: int) -> int:
 
 
 # Solution 3: Precompute the Parity Bits
-parity_table = {}
+parity_table = []
 
 
-def make_parity_table(n: int) -> dict:
+def make_parity_table(n: int) -> None:
+    global parity_table
+
     for i in range(n):
-        parity_table[i] = parity_1(i)
-    return parity_table
+        parity_table.append(parity_2(i))
 
 
 def parity_3(x: int) -> int:
