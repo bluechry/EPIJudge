@@ -6,17 +6,17 @@ def parity_1(x: int) -> int:
     return 0
 
 
-# Solution 2: Check Set Bits
+# Solution 2: Remove the Lowest Set Bit Repeatedly
 def parity_2(x: int) -> int:
     return 0
 
 
-# Solution 3: Precompute the Parity Bits
+# Solution 3: Precompute and Combine the Parity Bits of the Subgroups
 def parity_3(x: int) -> int:
     return 0
 
 
-# Solution 4: Divide and Xor
+# Solution 4: Repeatedly Xor the Two Halves of the Integer
 def parity_4(x: int) -> int:
     return 0
 

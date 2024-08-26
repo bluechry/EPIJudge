@@ -10,7 +10,7 @@ def parity_1(x: int) -> int:
     return parity
 
 
-# Solution 2: Remove Right-most Bit Repeatedly
+# Solution 2: Remove the Lowest Set Bit Repeatedly
 def parity_2(x: int) -> int:
     parity = 0
     while x:
@@ -19,7 +19,7 @@ def parity_2(x: int) -> int:
     return parity
 
 
-# Solution 3: Precompute the Parity Bits
+# Solution 3: Precompute and Combine the Parity Bits of the Subgroups
 parity_table = []
 
 
@@ -39,7 +39,7 @@ def parity_3(x: int) -> int:
     return parity
 
 
-# Solution 4: Divide and Xor
+# Solution 4: Repeatedly Xor the Two Halveds of the Integer
 def parity_4(x: int) -> int:
     x ^= x >> 32
     x ^= x >> 16
