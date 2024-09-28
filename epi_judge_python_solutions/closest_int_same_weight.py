@@ -13,7 +13,7 @@ def closest_int_same_bit_count_1(x: int) -> int:
 
     # Find the previous number.
     for i in range(num_bits - 1):
-        if ((x >> (i + 1)) & 1) > ((x >> i) & 1):
+        if ((x >> (i + 1)) & 1) == 1 and ((x >> i) & 1) == 0:
             prev_x = swap_adjacent_bits(x, i)
             break
     else:
@@ -21,7 +21,7 @@ def closest_int_same_bit_count_1(x: int) -> int:
 
     # Find the next number.
     for i in range(num_bits - 1):
-        if ((x >> (i + 1)) & 1) < ((x >> i) & 1):
+        if ((x >> (i + 1)) & 1) == 0 and ((x >> i) & 1) == 1:
             next_x = swap_adjacent_bits(x, i)
             break
     else:
@@ -46,6 +46,9 @@ def closest_int_same_bit_count_2(x: int) -> int:
 
 # Solution 3: Toggle the rightmost 01 or 10 bits in O(1)
 def closest_int_same_bit_count_3(x: int) -> int:
+    if x == 0 or x == (1 << 64) - 1:
+        raise ValueError("All bits are 0 or 1.")
+
     # Find the rightmost '10' or '01' bit pair.
     # Start by finding the rightmost set bit.
     # If the LSB is 1, find the rightmost clear bit followed by a set bit.
